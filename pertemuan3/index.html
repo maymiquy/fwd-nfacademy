@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 3 | HTML Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            gap: 0.5rem;
+        }
+
+        .checkbox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            color: #4b5563;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        }
+
+        input[type="file"] {
+            font-size: 0.875rem;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Form Pendaftaran</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required minlength="3">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <div class="form-group">
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+            </div>
+            <div class="form-group">
+                <label for="umur">Umur</label>
+                <input type="number" id="umur" name="umur" required min="18">
+            </div>
+            <div class="form-group">
+                <label for="jenis_kelamin">Jenis Kelamin</label>
+                <select id="jenis_kelamin" name="jenis_kelamin" required>
+                    <option value="">Pilih jenis kelamin</option>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nomor_telepon">Nomor Telepon</label>
+                <input type="text" id="nomor_telepon" name="nomor_telepon" required pattern="[0-9]{10,13}">
+            </div>
+            <div class="form-group">
+                <label for="foto_profil">Unggah Foto Profil</label>
+                <input type="file" id="foto_profil" name="foto_profil" accept="image/*">
+            </div>
+            <div class="form-group checkbox">
+                <input type="checkbox" id="persetujuan" name="persetujuan" required>
+                <label for="persetujuan">Saya menyetujui Syarat dan Ketentuan</label>
+            </div>
+            <button type="submit">Daftar</button>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('tanggal_lahir').addEventListener('change', function () {
+            const birthDate = new Date(this.value);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const month = today.getMonth() - birthDate.getMonth();
+
+            if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            document.getElementById('umur').value = Math.floor(age);
+        });
+
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            let result = 'Registrasi Berhasil!\n\n';
+
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'foto_profil') {
+                    result += `${key}: ${value}\n`;
+                } else if (value.name) {
+                    result += `${key}: ${value.name}\n`;
+                }
+            }
+
+            alert(result);
+        });
+    </script>
+</body>
+
+</html>
