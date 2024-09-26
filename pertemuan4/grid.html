@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grid-item {
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="bento-grid">
+            <article class="grid-item" style="background-color: #FF6B6B; grid-area: 1 / 1 / 2 / 3;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="white" />
+                    <text x="50" y="60" text-anchor="middle" fill="#FF6B6B" font-size="40">1</text>
+                </svg>
+            </article>
+            <article class="grid-item" style="background-color: #4ECDC4; grid-area: 1 / 3 / 2 / 5;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <rect x="20" y="20" width="60" height="60" fill="white" />
+                    <text x="50" y="60" text-anchor="middle" fill="#4ECDC4" font-size="40">2</text>
+                </svg>
+            </article>
+            <article class="grid-item" style="background-color: #45B7D1; grid-area: 2 / 1 / 3 / 2;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <polygon points="50,20 80,80 20,80" fill="white" />
+                    <text x="50" y="70" text-anchor="middle" fill="#45B7D1" font-size="40">3</text>
+                </svg>
+            </article>
+            <article class="grid-item" style="background-color: #F9C74F; grid-area: 2 / 2 / 3 / 4;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <ellipse cx="50" cy="50" rx="40" ry="30" fill="white" />
+                    <text x="50" y="60" text-anchor="middle" fill="#F9C74F" font-size="40">4</text>
+                </svg>
+            </article>
+            <article class="grid-item" style="background-color: #90BE6D; grid-area: 2 / 4 / 4 / 5;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <path d="M20,20 L80,20 L50,80 Z" fill="white" />
+                    <text x="50" y="50" text-anchor="middle" fill="#90BE6D" font-size="40">5</text>
+                </svg>
+            </article>
+            <article class="grid-item" style="background-color: #577590; grid-area: 3 / 1 / 4 / 3;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <rect x="20" y="20" width="60" height="60" rx="15" ry="15" fill="white" />
+                    <text x="50" y="60" text-anchor="middle" fill="#577590" font-size="40">6</text>
+                </svg>
+            </article>
+            <article class="grid-item" style="background-color: #F94144; grid-area: 3 / 3 / 4 / 4;">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="white" />
+                    <text x="50" y="60" text-anchor="middle" fill="#F94144" font-size="40">7</text>
+                </svg>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

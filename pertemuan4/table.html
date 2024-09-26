@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Penjualan Produk</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #sales-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .table-header {
+            background-color: #f3f4f6;
+        }
+
+        .table-row:nth-child(even) {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #1f2937; margin-bottom: 1rem;">Data Penjualan Produk</h1>
+
+        <div class="table-container">
+            <table id="sales-table">
+                <thead>
+                    <tr class="table-header">
+                        <th>Nama Produk</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Stok</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td>Laptop X1</td>
+                        <td>Elektronik</td>
+                        <td>Rp 15.000.000</td>
+                        <td>50</td>
+                        <td><span class="status-badge in-stock">Tersedia</span></td>
+                        <td><button class="action-button">Edit</button></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Smartphone Y2</td>
+                        <td>Elektronik</td>
+                        <td>Rp 5.000.000</td>
+                        <td>100</td>
+                        <td><span class="status-badge in-stock">Tersedia</span></td>
+                        <td><button class="action-button">Edit</button></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Headphone Z3</td>
+                        <td>Aksesoris</td>
+                        <td>Rp 1.000.000</td>
+                        <td>0</td>
+                        <td><span class="status-badge out-of-stock">Habis</span></td>
+                        <td><button class="action-button">Edit</button></td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Smartwatch W4</td>
+                        <td>Wearable</td>
+                        <td>Rp 3.000.000</td>
+                        <td>75</td>
+                        <td><span class="status-badge in-stock">Tersedia</span></td>
+                        <td><button class="action-button">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
