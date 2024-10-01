@@ -1,0 +1,28 @@
+
+.block-element {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid red(255, 0, 0);
+    width: 100%;
+}
+
+.inline-element {
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid red(255, 0, 0);
+    display: inline-block;
+}
+
+nav a {
+    background-color: #00796b;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #004d40;
+}

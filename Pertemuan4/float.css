@@ -1,0 +1,57 @@
+/* Mengatur margin dan padding default, dan menggunakan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Clearfix untuk mengatasi masalah float */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Elemen blok umum dengan padding, margin, dan warna background */
+.block-element {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgb(255, 0, 0); /* Properti border yang benar */
+    width: 100%;
+}
+
+/* Styling untuk elemen nav */
+nav.block-element {
+    float: left;
+    width: 20%;
+}
+
+/* Styling untuk sidebar */
+.sidebar.block-element {
+    float: right;
+    width: 30%;
+}
+
+/* Elemen inline-block dengan border dan margin */
+.inline-element {
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgb(255, 0, 0); /* Properti border yang benar */
+    display: inline-block;
+}
+
+/* Styling untuk link di dalam nav */
+nav a {
+    background-color: #00796b;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Hover effect untuk link */
+nav a:hover {
+    background-color: #004d40;
+}
