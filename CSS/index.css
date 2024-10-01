@@ -1,0 +1,32 @@
+
+@keyframes slideLeft{
+    from{
+        transform: translateX(-100px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+.slideLeft{
+    animation: slideLeft 1s ease-out;
+    
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: chocolate;
+}
+
+#hesnshin{    
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+}
+
+#henshin:hover{
+    transform: none;
+    color: violet;
+}

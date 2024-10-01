@@ -1,0 +1,60 @@
+*{
+box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background-image: url('../gambar-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: aqua;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar a{
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: blue;
+    color: white;
+}
+
+.collumn{
+    float: left;
+    padding: 10px;
+}
+
+.collumn.side{
+    width: 25%;
+}
+
+.collumn.midle{
+    width: 50%;
+}
+
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer{
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+}
