@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Persegi dan Lingkaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #333;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #616161;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #c9cbcb;
+        }
+
+        .hasil {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .angka-hasil {
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menghitung Luas Persegi Panjang dan Lingkaran</h1>
+
+    <div class="container">
+        <h2>Luas Persegi Panjang</h2>
+        <div class="hasil">
+            Panjang: <span class="angka-hasil" id="panjang"></span> cm <br>
+            Lebar: <span class="angka-hasil" id="lebar"></span> cm <br>
+            Luas Persegi Panjang: <span class="angka-hasil" id="luasPersegiPanjang"></span> cm²
+        </div>
+
+        <hr>
+
+        <h2>Luas Lingkaran</h2>
+        <div class="hasil">
+            Jari-jari: <span class="angka-hasil" id="jariJari"></span> cm <br>
+            Luas Lingkaran: <span class="angka-hasil" id="luasLingkaran"></span> cm²
+        </div>
+    </div>
+
+    <script>
+        // Function declaration untuk menghitung luas persegi panjang
+        function hitungLuasPersegiPanjang(panjang, lebar) {
+            return panjang * lebar;
+        }
+
+        // Arrow function untuk menghitung luas lingkaran
+        const hitungLuasLingkaran = (jariJari) => {
+            return Math.PI * jariJari * jariJari;
+        }
+
+        // Nilai parameter untuk persegi panjang
+        let panjang = 10;
+        let lebar = 5;
+
+        // Nilai parameter untuk lingkaran
+        let jariJari = 7;
+
+        // Memanggil fungsi untuk menghitung luas
+        let luasPersegiPanjang = hitungLuasPersegiPanjang(panjang, lebar);
+        let luasLingkaran = hitungLuasLingkaran(jariJari);
+
+        // Menampilkan hasil pada halaman dengan innerHTML
+        document.getElementById('panjang').innerHTML = panjang;
+        document.getElementById('lebar').innerHTML = lebar;
+        document.getElementById('luasPersegiPanjang').innerHTML = luasPersegiPanjang;
+
+        document.getElementById('jariJari').innerHTML = jariJari;
+        document.getElementById('luasLingkaran').innerHTML = luasLingkaran.toFixed(2);
+    </script>
+</body>
+</html>
